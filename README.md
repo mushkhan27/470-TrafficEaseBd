@@ -1,108 +1,55 @@
-# TrafficEase BD - CSE470 Software Engineering Project
+# TrafficEase BD 🚦
 
-## Project Title
-TrafficEase BD: Intelligent Multi-Modal Urban Mobility and Traffic Management Platform
+An urban traffic management application built to tackle real-world congestion challenges in Bangladesh. Developed as the final project for CSE470: Software Engineering at BRAC University.
 
-## Tech Stack
-- Frontend: React.js + CSS + Leaflet.js
-- Backend: Node.js + Express.js
-- Database: MongoDB
-- Authentication: JWT + bcrypt
-- Architecture: MVC (strictly followed)
+## 📋 About the Project
+TrafficEase BD provides a digital solution for monitoring and managing urban traffic flow. This project was developed with a strong emphasis on the complete software development lifecycle (SDLC), moving beyond basic implementation to include rigorous requirements engineering and automated testing.
 
-## Implemented Modules
-- JWT login and registration with commuter, driver, admin, and authority roles
-- Live traffic command center with congestion, speed, queue, signal, camera, transit, weather, dispatch, and route recommendation panels
-- Live traffic map with incident markers, vehicle markers, and colored corridor pressure overlays
-- Incident reporting and incident status management
-- Vehicle registration, fleet status, and vehicle statistics
-- Public alert publishing
-- Parking lot capacity and availability tracking
-- Traffic signal monitoring
-- Public transit route management
-- Operations summary dashboard
-- 30-feature platform module showcase
+## 💻 Tech Stack
+* **Frontend:** React.js, CSS, Leaflet.js
+* **Backend:** Node.js, Express.js
+* **Database:** MongoDB
+* **Authentication:** JWT & bcrypt
+* **Architecture:** MVC (Strictly followed)
 
-## 30 Feature Modules
-1. Live congestion index
-2. Corridor speed monitor
-3. Queue length estimator
-4. Signal phase tracking
-5. Adaptive signal timing
-6. Signal failure alerts
-7. Incident reporting
-8. Incident verification queue
-9. Emergency vehicle priority
-10. School-zone safety mode
-11. Weather impact scoring
-12. Flood-prone road alerts
-13. Air quality mobility note
-14. Bus route status
-15. Metro connection status
-16. Transit delay prediction
-17. Crowding level monitor
-18. Parking availability
-19. Parking demand forecast
-20. Ride-share pickup zones
-21. CNG stand availability
-22. Pedestrian crossing load
-23. Road work scheduling
-24. Event traffic plan
-25. Route recommendation
-26. ETA comparison
-27. Hotspot heat ranking
-28. Authority dispatch board
-29. Public alert broadcast
-30. Audit-ready activity log
+## ✨ Implemented Modules
+* **Role-Based Authentication:** JWT login and registration with Commuter, Driver, Admin, and Authority roles.
+* **Live Traffic Command Center:** Real-time panels for congestion, speed, queues, signals, transit, weather, and route recommendations.
+* **Live Traffic Map:** Interactive Leaflet.js map with incident markers, vehicle trackers, and colored corridor pressure overlays.
+* **Incident Management:** End-to-end incident reporting and verification tracking.
+* **City Infrastructure:** Live monitoring for parking lot capacity, traffic signals, and public transit routes.
+* **Fleet & Communications:** Vehicle registration, fleet status, and public alert broadcasting.
 
-## Setup Instructions
+<details>
+<summary><strong>View all 30 Feature Modules</strong></summary>
 
-### Backend
-```bash
-cd backend
-npm install
-# Optional: create .env file
-npm run dev
-```
+* Live congestion index & Corridor speed monitor
+* Queue length estimator & Signal phase tracking
+* Adaptive signal timing & Signal failure alerts
+* Incident reporting & Verification queue
+* Emergency vehicle priority & School-zone safety mode
+* Weather impact scoring & Flood-prone road alerts
+* Air quality mobility note
+* Bus/Metro route status & Transit delay prediction
+* Crowding level monitor & Parking availability/forecast
+* Ride-share pickup zones & CNG stand availability
+* Pedestrian crossing load & Road work scheduling
+* Event traffic plan & Route recommendation
+* ETA comparison & Hotspot heat ranking
+* Authority dispatch board & Public alert broadcast
+* Audit-ready activity log
+</details>
 
-### Frontend
-```bash
-cd frontend
-npm install
-npm start
-```
 
-### MongoDB
-Use MongoDB Atlas or local MongoDB. Update MONGO_URI in backend/.env
 
-## Environment Variables (backend/.env)
-```
+## 🚀 Setup Instructions
+
+### Prerequisites
+Use MongoDB Atlas or a local MongoDB instance. Update the `MONGO_URI` in the backend accordingly.
+
+### 1. Backend Setup
+Create a `.env` file in the `backend/` directory:
+```env
 PORT=5000
 MONGO_URI=mongodb://localhost:27017/trafficease_bd
 JWT_SECRET=your_super_secret_key
-```
-
-## Frontend Environment Variables
-Create `frontend/.env` only if the backend is not running at `http://localhost:5000`.
-
-```
-REACT_APP_API_URL=http://localhost:5000/api
-```
-
-## Main API Routes
-- `POST /api/auth/register`
-- `POST /api/auth/login`
-- `GET /api/summary`
-- `GET, POST /api/incidents`
-- `GET, POST /api/vehicles`
-- `GET, POST /api/alerts`
-- `GET, POST /api/parking`
-- `GET, POST /api/signals`
-- `GET, POST /api/transit`
-- `GET /api/live-traffic`
-- `GET /api/live-traffic/features`
-
-## Notes
-- Login/Registration is mandatory but NOT part of the 20 features.
-- Follow MVC strictly.
-- Use GitHub and add faculty as collaborator.
